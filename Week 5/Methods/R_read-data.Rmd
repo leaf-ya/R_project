@@ -1,6 +1,7 @@
 ---
 title: "Basic R and how to read in data"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -154,7 +155,7 @@ excel_data <- read_xlsx(filename, sheet = 1) #(to read the first sheet)
 --> How would you read in a text file? (Check the data import cheat sheet!)
 There is a text file in your dataset so you can practice: psa.txt
 
-```{r}
+```{r read text file}
 library(here)
 psa_data <- read.table(here("input/psa.txt"))
 head(psa_data)
@@ -164,14 +165,15 @@ head(psa_data)
 Use a few of them when you read in fev.csv and look at the data, is that what you expected?
 
 
-```{r}
-# Add your code here!
+```{r argument}
+library(here)
+fev_data <- read_csv(here("input/fev.csv"), n_max = 20)
 ```
 
 --> Apply the summary function to a tibble. What does it do?
 
-```{r}
-# Add your code here!
+```{r summary}
+summary(fev_data)
 ```
 
 
