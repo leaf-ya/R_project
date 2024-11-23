@@ -156,13 +156,13 @@ There is a text file in your dataset so you can practice: psa.txt
 
 ```{r}
 library(here)
-psa_data <- here("input/psa.txt") %>% 
-  read.table()
+psa_data <- read.table(here("input/psa.txt"))
+head(psa_data)
 ```
 
 --> Have a look at the "Useful arguments" section of the data import cheat sheet. 
 Use a few of them when you read in fev.csv and look at the data, is that what you expected?
-ins
+
 
 ```{r}
 # Add your code here!
