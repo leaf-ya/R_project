@@ -123,8 +123,10 @@ fev_data <- read_csv(here("input/fev.csv"))
 
 --> How would you use read_csv with the pipe operator?
 
-```{r}
-# Add your code here!
+```{r pipe operator}
+library(here)
+fev_data <- here("input/fev.csv") %>%
+  read_csv()
 ```
 
 Look at the top few rows of the data:
@@ -153,11 +155,14 @@ excel_data <- read_xlsx(filename, sheet = 1) #(to read the first sheet)
 There is a text file in your dataset so you can practice: psa.txt
 
 ```{r}
-# Add your code here!
+library(here)
+psa_data <- here("input/psa.txt") %>% 
+  read.table()
 ```
 
 --> Have a look at the "Useful arguments" section of the data import cheat sheet. 
 Use a few of them when you read in fev.csv and look at the data, is that what you expected?
+ins
 
 ```{r}
 # Add your code here!
