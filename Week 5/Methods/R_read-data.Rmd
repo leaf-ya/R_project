@@ -116,7 +116,7 @@ To read in a file that is saved in the same directory as the .Rproj file:
 
 ```{r}
 library(here)
-fev_data <- read_csv(here("fev.csv"))
+fev_data <- read_csv(here("input/fev.csv"))
 ```
 
 (Remember to install the "here" package the first time.)
